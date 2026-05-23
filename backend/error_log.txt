@@ -1,0 +1,50 @@
+Step 1: Importing settings...
+  OK!
+Step 2: Importing database...
+  OK!
+Step 3: Importing routers...
+WARNING:tensorflow:From D:\vision_attend\backend\venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From D:\vision_attend\backend\venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From D:\vision_attend\backend\venv\lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+  OK!
+Step 4: Creating FastAPI app...
+  OK!
+Step 5: Testing database initialization...
+2026-01-30 19:24:17,010 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+2026-01-30 19:24:17,010 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-01-30 19:24:17,011 INFO sqlalchemy.engine.Engine select current_schema()
+2026-01-30 19:24:17,012 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-01-30 19:24:17,013 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+2026-01-30 19:24:17,013 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-01-30 19:24:17,013 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-30 19:24:17,016 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2026-01-30 19:24:17,016 INFO sqlalchemy.engine.Engine [generated in 0.00016s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2026-01-30 19:24:17,018 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2026-01-30 19:24:17,018 INFO sqlalchemy.engine.Engine [cached since 0.00166s ago] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2026-01-30 19:24:17,018 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2026-01-30 19:24:17,018 INFO sqlalchemy.engine.Engine [cached since 0.00209s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2026-01-30 19:24:17,019 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2026-01-30 19:24:17,019 INFO sqlalchemy.engine.Engine [cached since 0.002458s ago] ('attendance', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2026-01-30 19:24:17,020 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+2026-01-30 19:24:17,020 INFO sqlalchemy.engine.Engine [generated in 0.00012s] ('userrole', 'pg_catalog')
+2026-01-30 19:24:17,020 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+2026-01-30 19:24:17,021 INFO sqlalchemy.engine.Engine [cached since 0.0009897s ago] ('attendancestatus', 'pg_catalog')
+2026-01-30 19:24:17,021 INFO sqlalchemy.engine.Engine COMMIT
+  OK!
+
+All imports successful!

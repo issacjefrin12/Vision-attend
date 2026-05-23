@@ -1,0 +1,15 @@
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.git
+.gitignore
+migrations/__pycache__
+app/**/__pycache__
